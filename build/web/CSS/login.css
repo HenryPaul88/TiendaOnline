@@ -1,0 +1,47 @@
+  
+  .login-box {
+    width: 30%;
+    height: 50%;
+    background: rgb(62, 64, 66);
+    color: #fff;
+    box-sizing: border-box;
+    padding: 70px 30px;
+    left: 35%;
+    position: relative;
+    margin-bottom: 3%;
+    margin-top: 3%;
+  }
+  
+  .login-box h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 32px;
+    color: rgb(192, 27, 110);
+  }
+  
+  .login-box input {
+    width: 100%;
+    margin-bottom: 20px;
+    
+  }
+  .login-box input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: rgb(192, 27, 110);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+  }
+  .obligatorio{
+    display: none;
+    color: red;
+	font-family: "Verdana";
+	font-size: 90%;
+	padding-bottom: 3%;
+}
+.preguntas{
+  text-align: center;
+}
+
