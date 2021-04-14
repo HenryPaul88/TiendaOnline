@@ -1,0 +1,45 @@
+.cabecera {
+    background-color: rgb(192, 27, 110);
+}
+
+h1 {
+    margin-right: 1%;
+    color: rgb(202, 9, 35);
+    font-family: 'Courier New', Courier;
+}
+h2 {
+    text-align: center;
+    color: rgb(34, 143, 216);
+}
+#demo {
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 25%;
+    text-align: center;
+    height: 60%;
+    margin-bottom: 4%;
+}
+
+footer {
+    background-color: #1A1A1A;
+    height: 50%;
+    color: white;
+    padding: 15px;
+}
+
+#titulo {
+    color: rgb(236, 225, 225);
+    font-family: cursive;
+}
+.pag{
+    margin-bottom: 10%;
+    margin-left: 32%;;
+}
+#precio{
+    margin-left: 15%;
+    color: rgb(150, 8, 8);
+    font-size: large;
+}
+.nav li a{
+    color: rgb(192, 27, 110);
+}
