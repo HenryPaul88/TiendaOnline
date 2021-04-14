@@ -44,12 +44,10 @@ public class RecuperarFamilias extends HttpServlet {
                 String salida = null;
         
         try {
-                System.out.println("llega servlet familia 1");
+                
         	familias = new ServicioFamilias();
-        	lista = familias.recuperarTodosFamilias();
-                System.out.println("llega servlet familia 2");
+        	lista = familias.recuperarTodosFamilias();               
         	request.setAttribute("familias", lista);
-                System.out.println("llega servlet familia 3");
         	
         	salida = "/AddProducto.jsp";
 			

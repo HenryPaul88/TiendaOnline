@@ -33,11 +33,5 @@
     border-radius: 20px;
     margin-left: 100%;
   }
-  .obligatorio{
-    display: none;
-    color: red;
-	font-family: "Verdana";
-	font-size: 90%;
-	padding-bottom: 3%;
-}
+
 

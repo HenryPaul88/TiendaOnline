@@ -79,13 +79,10 @@ public class ServicioFamilias {
 		List<Familias> list = new ArrayList<Familias>();
 
 		try {
-                        System.out.println("llega servicio familia 1");
-			trans = new TransaccionesManager();
-                        System.out.println("llega servicio familia 2");
-			FamiliasDao familiasDao = trans.getFamiliasDao();
-                        System.out.println("llega servicio familia 3");
+                        
+			trans = new TransaccionesManager();                      
+			FamiliasDao familiasDao = trans.getFamiliasDao();                        
 			list = familiasDao.recuperarFamilias();
-                        System.out.println("llega servicio familia 4");
 			trans.closeCommit();
 		} catch (DAOException e) {
 			try {

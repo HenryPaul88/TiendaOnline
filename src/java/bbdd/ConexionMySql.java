@@ -16,11 +16,11 @@ public class ConexionMySql {
 
     public ConexionMySql() throws DAOException {
         try {
-            System.out.println("llega base de datos mysql 1");
+            
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("llega base de datos mysql 2");
+            
             objconexion = DriverManager.getConnection("jdbc:mysql://localhost:3307/tienda_oline", "root", "");
-            System.out.println("llega base de datos mysql 3");
+           
         } catch (ClassNotFoundException e) {
             throw new DAOException("no se ha cargado los controladores jdbc", e);
 

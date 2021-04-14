@@ -89,14 +89,11 @@ public class FamiliasDao {
         try {
            
             st = con.prepareStatement(DbQuery.getRecuperarfamilias());
-            System.out.println("llega dao familia 2");
             rs = st.executeQuery();
-            System.out.println("llega dao familia 3");
-            int i=0;
-            while (rs.next()) {
-                i++;
+
+            while (rs.next()) {              
                 list.add(new Familias(rs.getInt(1), rs.getString(2), rs.getString(3)));
-                System.out.println("entro");
+                
             }
         } catch (SQLException e) {
             throw new DAOException(DB_ERR, e);

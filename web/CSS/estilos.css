@@ -43,3 +43,11 @@ footer {
 .nav li a{
     color: rgb(192, 27, 110);
 }
+
+ .obligatorio{
+    display: none;
+    color: red;
+	font-family: "Verdana";
+	font-size: 90%;
+	padding-bottom: 3%;
+}

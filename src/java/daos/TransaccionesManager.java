@@ -16,7 +16,7 @@ public class TransaccionesManager {
 	public TransaccionesManager() throws DAOException {
 		try {
 			con = new ConexionMySql().getConexion();
-                        System.out.println("llega transaccion tienda");
+                        
 			con.setAutoCommit(false);
 		} catch (SQLException e) {
 			throw new DAOException("Error en la  bbdd", e);

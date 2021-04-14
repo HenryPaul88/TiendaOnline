@@ -38,7 +38,7 @@
                                 <button class="btn btn-success" type="button" >Search</button>
                             </div>
                              <div class="col-sm-2">
-                            	<a href="AddProducto.jsp"> <button class="btn btn-primary" type="button" >prueba</button> </a>
+                            	<a href="InsertarProducto"> <button class="btn btn-primary" type="button" >Añadir Productos</button> </a>
                                 
                             </div>
                             <div class="col-sm-1">
