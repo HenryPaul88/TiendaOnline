@@ -155,7 +155,7 @@
 
                                 <%
                                     List<Imagen> listaImagen = (List<Imagen>) request.getAttribute("imagenes");
-                                    System.out.println("llega pagina 3");
+                                    
                                     for (int i = 0; i < listaImagen.size(); i++) {
 
                                         if (listaImagen.size() != 0) {

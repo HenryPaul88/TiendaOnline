@@ -38,7 +38,7 @@
                                 <button class="btn btn-success" type="button" >Search</button>
                             </div>
                              <div class="col-sm-2">
-                            	<a href="InsertarProducto"> <button class="btn btn-primary" type="button" >Añadir Productos</button> </a>
+                            	<a href="FormularioProducto"> <button class="btn btn-primary" type="button" >Añadir Productos</button> </a>
                                 
                             </div>
                             <div class="col-sm-1">

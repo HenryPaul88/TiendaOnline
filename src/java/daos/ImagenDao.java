@@ -8,8 +8,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import domain.Descuento;
-import domain.Familias;
 import domain.Imagen;
 import domain.Producto;
 import exceptions.DAOException;
