@@ -3,18 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/henry/NetBeansProjects/Regalos/src/java/domain/Imagen.java</file>
+            <file>file:/home/henry/NetBeansProjects/Regalos/src/java/servicios/ServicioProducto.java</file>
             <file>file:/home/henry/NetBeansProjects/Regalos/src/java/servlets/InsertarProducto.java</file>
             <file>file:/home/henry/NetBeansProjects/Regalos/web/AddProducto.jsp</file>
-            <file>file:/home/henry/NetBeansProjects/Regalos/src/java/servlets/RecuperarFamilias.java</file>
-            <file>file:/home/henry/NetBeansProjects/Regalos/src/java/domain/Descuento.java</file>
-            <file>file:/home/henry/NetBeansProjects/Regalos/web/incluir/header.jsp</file>
-            <file>file:/home/henry/NetBeansProjects/Regalos/src/java/daos/DescuentoDao.java</file>
+            <file>file:/home/henry/NetBeansProjects/Regalos/src/java/servlets/InsertarCliente.java</file>
+            <file>file:/home/henry/NetBeansProjects/Regalos/web/InsertadoPro.jsp</file>
             <file>file:/home/henry/NetBeansProjects/Regalos/src/java/recursos/DbQuery.java</file>
             <file>file:/home/henry/NetBeansProjects/Regalos/src/java/daos/ProductoDao.java</file>
             <file>file:/home/henry/NetBeansProjects/Regalos/web/index.jsp</file>
+            <file>file:/home/henry/NetBeansProjects/Regalos/src/java/servlets/FormularioProducto.java</file>
             <file>file:/home/henry/NetBeansProjects/Regalos/src/java/domain/Producto.java</file>
-            <file>file:/home/henry/NetBeansProjects/Regalos/src/java/daos/ImagenDao.java</file>
         </group>
     </open-files>
 </project-private>

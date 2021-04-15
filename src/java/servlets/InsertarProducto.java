@@ -3,6 +3,7 @@ package servlets;
 import domain.Descuento;
 import domain.Familias;
 import domain.Imagen;
+import domain.Producto;
 import exceptions.DomainException;
 import exceptions.ServiceException;
 import java.io.IOException;
@@ -16,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import servicios.ServicioDescuento;
 import servicios.ServicioFamilias;
 import servicios.ServicioImagen;
+import servicios.ServicioProducto;
 
 /**
  * Servlet implementation class InsertarProducto
@@ -53,42 +55,35 @@ public class InsertarProducto extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO Auto-generated method stub
-        ServicioFamilias familias;
-        ServicioDescuento descuento;
-        ServicioImagen imagen;
-        List<Familias> listaFamilia = new ArrayList<Familias>();
-        List<Descuento> listaDescuento = new ArrayList<Descuento>();
-        List<Imagen> listaImagen = new ArrayList<Imagen>();
+
+        ServicioProducto productoServicio;
         String salida = null;
+        int idProducto = 0;
+        String insertadoExitoso= null;
 
         try {
 
-            familias = new ServicioFamilias();
-            descuento = new ServicioDescuento();
-            imagen = new ServicioImagen();
-            
-            listaFamilia = familias.recuperarTodosFamilias();
-            listaDescuento = descuento.recuperarTodosDescuento();
-            listaImagen = imagen.recuperarImagen();
-            request.setAttribute("familias", listaFamilia);
-            request.setAttribute("descuentos", listaDescuento);
-            request.setAttribute("imagenes", listaImagen);
+            productoServicio = new ServicioProducto();
+            idProducto = productoServicio.idProducto()+1;
 
-            salida = "/AddProducto.jsp";
+            productoServicio.insertarProducto(new Producto(idProducto, request.getParameter("nombre"),
+                    new Familias(Integer.parseInt(request.getParameter("familias"))), Double.parseDouble(request.getParameter("precio")),
+                    request.getParameter("descripcion"), new Imagen(Integer.parseInt(request.getParameter("Imagen"))),
+                    new Descuento(Integer.parseInt(request.getParameter("Descuento")))));
+
+            salida = "/InsertadoPro.jsp";
+            insertadoExitoso= "Se ha añadido nuevo producto con exito! ";
+            request.setAttribute("Insertado", insertadoExitoso);
 
         } catch (ServiceException | DomainException e) {
-            if (e.getCause() == null) {//Error Logico para usuario
-                request.setAttribute("error", e.getMessage());
-                salida = "/DevolverPaginaError.jsp";
-
+            if (e.getCause() == null) {
+                System.out.println(e.getMessage());
             } else {
-
-                request.setAttribute("error", "error interno");
-                salida = "/DevolverPaginaError.jsp";
-                e.printStackTrace();// para administrador
-
+                e.printStackTrace();// 
+                System.out.println("ertor interno");
             }
         }
+
         getServletContext().getRequestDispatcher(salida).forward(request, response);
 
     }

@@ -38,6 +38,10 @@
 
                 <h1>Registro Producto</h1>
                 <!-- 1 -->
+                
+                
+                
+                <!-- 1 -->
                 <form ACTION="InsertarProducto" method="POST">
 
                     <div class="col-sm-6">                 
@@ -183,9 +187,9 @@
                     <div class="col-sm-6">                 
                         <div class="input-group mb-4">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Descrpcion:(*)</span>
+                                <span class="input-group-text" id="inputGroup-sizing-default">Descripcion:(*)</span>
                             </div>
-                            <textarea id="observaciones" name="observaciones" rows="4" cols="150" style="border:solid blue"></textarea>
+                            <textarea id="descripcion:" name="descripcion:" rows="4" cols="150" style="border:solid blue"></textarea>
                         </div>
 
                     </div>

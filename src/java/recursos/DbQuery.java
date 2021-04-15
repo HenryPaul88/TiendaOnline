@@ -10,9 +10,9 @@ public class DbQuery {
 	private static final String BorrarCliente = "";
 	private static final String ModificarCliente = "";
 	// productos
-	private static final String IdProductos = "select max(cod_pro) from Productos";
-	private static final String RecuperarProductos = "select cod_pro, cod_fam, nom_pro, precio, desc_pro, cod_img, cod_des from Productos";
-	private static final String InsertarProductos = "insert into Productos values(?,?,?,?,?,?,?)";
+	private static final String IdProductos = "select max(cod_pro) from Producto";
+	private static final String RecuperarProductos = "select cod_pro, cod_fam, nom_pro, precio, desc_pro, cod_img, cod_des from Producto";
+	private static final String InsertarProductos = "insert into Producto values(?,?,?,?,?,?,?)";
 	private static final String BorrarProductos = "";
 	private static final String ModificarProductos = "";
 
