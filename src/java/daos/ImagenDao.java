@@ -88,12 +88,14 @@ public class ImagenDao {
         List<Imagen> list = new ArrayList<Imagen>();
         
         try {
+            
             st = con.prepareStatement(DbQuery.getRecuperarimagenes());
             rs = st.executeQuery();
             while (rs.next()) {
-
+                
                 list.add(new Imagen(rs.getInt(1),rs.getString(2), new Producto(rs.getInt(3)),
-                		rs.getString(5)));
+                		rs.getString(4)));
+                
             }
         } catch (SQLException e) {
             throw new DAOException(DB_ERR, e);

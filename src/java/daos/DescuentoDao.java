@@ -86,10 +86,11 @@ public class DescuentoDao {
         List<Descuento> list = new ArrayList<Descuento>();
         
         try {
+            
             st = con.prepareStatement(DbQuery.getRecuperardescuento());
             rs = st.executeQuery();
             while (rs.next()) {
-
+               
                 list.add(new Descuento(rs.getInt(1),rs.getInt(2)));
             }
         } catch (SQLException e) {

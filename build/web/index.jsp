@@ -47,12 +47,12 @@
                 <div class="form-row">
                     <div class="col-sm-2"></div>
                     <div class="col">
-                        <img src="imagen/Regalo-Madre-30.png">
+                        <img src="imagen/DiaDeLaMadre/Regalo-Madre-30.png">
                         <p id="precio">40 EUROS</p>
                     </div>
                     <div class="col-sm-4"></div>
                     <div class="col">
-                        <img src="imagen/Regalo-Madre-20.jpg">
+                        <img src="imagen/DiaDeLaMadre/Regalo-Madre-20.jpg">
                         <p id="precio">25 EUROS</p>
                     </div>
 

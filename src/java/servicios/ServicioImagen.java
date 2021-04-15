@@ -77,7 +77,7 @@ public class ServicioImagen {
 
 		TransaccionesManager trans = null;
 		List<Imagen> list = new ArrayList<Imagen>();
-
+                
 		try {
 
 			trans = new TransaccionesManager();

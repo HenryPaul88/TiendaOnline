@@ -10,30 +10,30 @@ public class DbQuery {
 	private static final String BorrarCliente = "";
 	private static final String ModificarCliente = "";
 	// productos
-	private static final String IdProductos = "select max(cod_pro) from productos";
-	private static final String RecuperarProductos = "select cod_pro, cod_fam, nom_pro, precio, desc_pro, cod_img, cod_des from productos";
-	private static final String InsertarProductos = "insert into productos values(?,?,?,?,?,?,?)";
+	private static final String IdProductos = "select max(cod_pro) from Productos";
+	private static final String RecuperarProductos = "select cod_pro, cod_fam, nom_pro, precio, desc_pro, cod_img, cod_des from Productos";
+	private static final String InsertarProductos = "insert into Productos values(?,?,?,?,?,?,?)";
 	private static final String BorrarProductos = "";
 	private static final String ModificarProductos = "";
 
 	// familias
-	private static final String IdFamilias = "select max(cod_fam) from familias";
+	private static final String IdFamilias = "select max(cod_fam) from Familias";
 	private static final String RecuperarFamilias = "select cod_fam, nom_fam, desc_fam from Familias";
-	private static final String InsertarFamilias = "insert into familias values(?,?,?)";
+	private static final String InsertarFamilias = "insert into Familias values(?,?,?)";
 	private static final String BorrarFamilias = "";
 	private static final String ModificarFamilias = "";
 
 	// imagenes
-	private static final String IdImagenes = "select max(cod_imag) from imagenes";
-	private static final String RecuperarImagenes = "select cod_img, ruta, cod_pro, ruta_abs from imagenes";
-	private static final String InsertarImagenes = "insert into imagenes values(?,?,?,?)";
+	private static final String IdImagenes = "select max(cod_imag) from Imagen";
+	private static final String RecuperarImagenes = "select cod_img, ruta, cod_pro, ruta_abs from Imagen";
+	private static final String InsertarImagenes = "insert into Imagen values(?,?,?,?)";
 	private static final String BorrarImagenes = "";
 	private static final String ModificarImagenes = "";
 
 	// descuento
-	private static final String IdDescuento = "select max(cod_des) from descuento";
-	private static final String RecuperarDescuento = "select cod_des, descuento from descuento";
-	private static final String InsertarDescuento = "insert into descuento values(?,?)";
+	private static final String IdDescuento = "select max(cod_des) from Descuento";
+	private static final String RecuperarDescuento = "select cod_des, descuento from Descuento";
+	private static final String InsertarDescuento = "insert into Descuento values(?,?)";
 	private static final String BorrarDescuento = "";
 	private static final String ModificarDescuento = "";
 

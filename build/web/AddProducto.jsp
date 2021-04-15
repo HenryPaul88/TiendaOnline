@@ -3,6 +3,8 @@
     Created on : 14-abr-2021, 17:32:35
     Author     : henry
 --%>
+<%@page import="domain.Imagen"%>
+<%@page import="domain.Descuento"%>
 <%@ page import ="domain.Familias"%>
 <%@ page import ="java.util.ArrayList"%>
 <%@ page import ="java.util.List"%>
@@ -81,19 +83,26 @@
 
                                         <%
 
-                                            List<Familias> lista = (List<Familias>) application.getAttribute("familias");
+                                            List<Familias> listaFamilia = (List<Familias>) request.getAttribute("familias");
 
-                                            for (int i = 0; i < lista.size(); i++) {
+                                           
+                                            for (int i = 0; i < listaFamilia.size(); i++) {
 
-                                                if (i == 0) {
+                                                if (listaFamilia != null) {
+
+                                                    if (i == 0) {
 
                                         %>
-                                        <option value=<%= lista.get(i).getCod_fam()%> selected> <%= lista.get(i).getNom_fam()%> </option>
+                                        <option value=<%= listaFamilia.get(i).getCod_fam()%> selected> <%= listaFamilia.get(i).getNom_fam()%> </option>
                                         <% 	} else {
                                         %>
-                                        <option value=<%= lista.get(i).getCod_fam()%> selected> <%= lista.get(i).getNom_fam()%> </option>
+                                        <option value=<%= listaFamilia.get(i).getCod_fam()%> > <%= listaFamilia.get(i).getNom_fam()%> </option>
                                         <%
-                                                }
+                                            }
+                                        } else {
+                                        %>
+                                        <option>vacio</option>
+                                        <%        }
                                             }
                                         %>
                                     </select>
@@ -106,21 +115,24 @@
                                         <span class="input-group-text" id="inputGroup-sizing-default">Descuentos:(*)</span>
                                     </div>
 
-                                    <select name="familias">
+                                    <select name="Descuento">
 
                                         <%
-                                            //  List<Familias> lista = (List<Familias>) application.getAttribute("familias");
-                                            for (int i = 0; i < lista.size(); i++) {
+                                            List<Descuento> listaDescuento = (List<Descuento>) request.getAttribute("descuentos");
+                                                    
+                                            for (int i = 0; i < listaDescuento.size(); i++) {
 
-                                                if (i == 0) {
+                                               
+                                                    if (i == 0) {
 
                                         %>
-                                        <option value=<%= lista.get(i).getCod_fam()%> selected> <%= lista.get(i).getNom_fam()%> </option>
+                                        <option value=<%= listaDescuento.get(i).getCod_des()%> selected> <%= listaDescuento.get(i).getDescuento()%> </option>
                                         <% 	} else {
                                         %>
-                                        <option value=<%= lista.get(i).getCod_fam()%> selected> <%= lista.get(i).getNom_fam()%> </option>
+                                        <option value=<%= listaDescuento.get(i).getCod_des()%> > <%= listaDescuento.get(i).getDescuento()%> </option>
                                         <%
-                                                }
+                                            }
+                                       
                                             }
                                         %>
                                     </select>
@@ -139,21 +151,27 @@
                                 <span class="input-group-text" id="inputGroup-sizing-default">Imagen:(*)</span>
                             </div>
 
-                            <select name="familias">
+                            <select name="Imagen">
 
                                 <%
-                                    //  List<Familias> lista = (List<Familias>) application.getAttribute("familias");
-                                    for (int i = 0; i < lista.size(); i++) {
+                                    List<Imagen> listaImagen = (List<Imagen>) request.getAttribute("imagenes");
+                                    System.out.println("llega pagina 3");
+                                    for (int i = 0; i < listaImagen.size(); i++) {
 
-                                        if (i == 0) {
+                                        if (listaImagen.size() != 0) {
+                                            if (i == 0) {
 
                                 %>
-                                <option value=<%= lista.get(i).getCod_fam()%> selected> <%= lista.get(i).getNom_fam()%> </option>
+                                <option value=<%= listaImagen.get(i).getCod_img()%> selected> <%= listaImagen.get(i).getRuta()%> </option>
                                 <% 	} else {
                                 %>
-                                <option value=<%= lista.get(i).getCod_fam()%> selected> <%= lista.get(i).getNom_fam()%> </option>
+                                <option value=<%= listaImagen.get(i).getCod_img()%> > <%= listaImagen.get(i).getRuta()%> </option>
                                 <%
-                                        }
+                                    }
+                                } else {
+                                %>
+                                <option value=1>vacio</option>
+                                <%        }
                                     }
                                 %>
                             </select>
