@@ -13,18 +13,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet"
-              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script
-        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script
-        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="CSS/estilos.css">
+
+
+        <%@ include file="incluir/bootstrap.jsp"%>
         <title>Añadir Productos</title>
-
-
 
     </head>
     <body>
@@ -38,9 +30,9 @@
 
                 <h1>Registro Producto</h1>
                 <!-- 1 -->
-                
-                
-                
+
+                <p style="color: green"> ${Insertado} </p>
+
                 <!-- 1 -->
                 <form ACTION="InsertarProducto" method="POST">
 
@@ -68,10 +60,10 @@
                             <input type="text" class="form-control" aria-label="Default"
                                    aria-describedby="inputGroup-sizing-default" name="precio"
                                    style="border: solid blue"
-                                   onblur="validarStringInside(this, 3, 100, precioError)">
+                                   onblur="validarNUmeroDigitosInside(this, 1, 1000, precioError)">
                         </div>
                         <label class="obligatorio" id="precioError" for="precio">
-                            nombre: mas de 3 caracteres </label>
+                            Precio: numeros mayor que 1 y menos que 1000 </label>
                     </div>
 
                     <!-- 1 -->
@@ -89,7 +81,6 @@
 
                                             List<Familias> listaFamilia = (List<Familias>) request.getAttribute("familias");
 
-                                           
                                             for (int i = 0; i < listaFamilia.size(); i++) {
 
                                                 if (listaFamilia != null) {
@@ -123,11 +114,10 @@
 
                                         <%
                                             List<Descuento> listaDescuento = (List<Descuento>) request.getAttribute("descuentos");
-                                                    
+
                                             for (int i = 0; i < listaDescuento.size(); i++) {
 
-                                               
-                                                    if (i == 0) {
+                                                if (i == 0) {
 
                                         %>
                                         <option value=<%= listaDescuento.get(i).getCod_des()%> selected> <%= listaDescuento.get(i).getDescuento()%> </option>
@@ -135,8 +125,8 @@
                                         %>
                                         <option value=<%= listaDescuento.get(i).getCod_des()%> > <%= listaDescuento.get(i).getDescuento()%> </option>
                                         <%
-                                            }
-                                       
+                                                }
+
                                             }
                                         %>
                                     </select>
@@ -159,7 +149,7 @@
 
                                 <%
                                     List<Imagen> listaImagen = (List<Imagen>) request.getAttribute("imagenes");
-                                    
+
                                     for (int i = 0; i < listaImagen.size(); i++) {
 
                                         if (listaImagen.size() != 0) {
@@ -189,7 +179,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Descripcion:(*)</span>
                             </div>
-                            <textarea id="descripcion:" name="descripcion:" rows="4" cols="150" style="border:solid blue"></textarea>
+                            <textarea id="descripcion" name="descripcion" rows="4" cols="150" style="border:solid blue"></textarea>
                         </div>
 
                     </div>
@@ -199,10 +189,13 @@
 
                     <div class="col-sm-4">
                         <p>Obligatorio (*)</p>
-                        <input type="submit" value="Enviar">
+
+                        <div class="input-group mb-4">
+                            <input class="btn btn-primary" type="submit" value="Enviar">
+                        </div>
+
                     </div>
                 </form>
-
             </div>
         </div>
 

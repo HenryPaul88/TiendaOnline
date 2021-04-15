@@ -30,7 +30,6 @@ public class ClienteDao {
 
 		PreparedStatement st = null;
 		PreparedStatement sti = null;
-		ResultSet rs = null;
 
 		try {
 			st = con.prepareStatement(DbQuery.getInsertarcliente());

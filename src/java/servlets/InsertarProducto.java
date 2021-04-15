@@ -71,7 +71,7 @@ public class InsertarProducto extends HttpServlet {
                     request.getParameter("descripcion"), new Imagen(Integer.parseInt(request.getParameter("Imagen"))),
                     new Descuento(Integer.parseInt(request.getParameter("Descuento")))));
 
-            salida = "/InsertadoPro.jsp";
+            salida = "/FormularioProducto";
             insertadoExitoso= "Se ha añadido nuevo producto con exito! ";
             request.setAttribute("Insertado", insertadoExitoso);
 

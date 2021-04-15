@@ -34,28 +34,19 @@ public class ProductoDao {
 
 		PreparedStatement st = null;
 		PreparedStatement sti = null;
-		ResultSet rs = null;
+		
 
 		try {
 			st = con.prepareStatement(DbQuery.getInsertarproductos());
-                        System.out.println("dao pro 1");
-			st.setInt(1, producto.getCod_pro());
-                        System.out.println("dao pro 2");
+			st.setInt(1, producto.getCod_pro());                       
 			st.setString(2, producto.getNom_pro());
-                        System.out.println("dao pro 3");
 			st.setInt(3, producto.getCod_fam().getCod_fam());
-                        System.out.println("dao pro 4");
 			st.setDouble(4, producto.getPrecio());
-                        System.out.println("dao pro 5");
 			st.setString(5, producto.getDesc_pro());
-                        System.out.println("dao pro 6");
 			st.setInt(6, producto.getCod_img().getCod_img());
-                        System.out.println("dao pro 7");
 			st.setInt(7, producto.getCod_des().getCod_des());
-                        //System.out.println(producto.getCod_des().getCod_des());
-
 			st.executeUpdate();
-                        System.out.println("dao pro 9");
+
 		} catch (SQLException e) {
 			if (e.getErrorCode() == ORACLE_DUPLICATE_PK) {
 				throw new DAOException(" cliente ya existe");
