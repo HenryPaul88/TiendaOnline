@@ -37,8 +37,7 @@ public class ImagenDao {
 			st = con.prepareStatement(DbQuery.getInsertarimagenes());
 			st.setInt(1, imagen.getCod_img());
 			st.setString(2, imagen.getRuta());
-			st.setInt(3, imagen.getProducto().getCod_pro());
-			st.setString(4, imagen.getRuta_abs());
+			st.setString(3, imagen.getRuta_abs());
 
 			st.executeUpdate();
 		} catch (SQLException e) {
@@ -91,8 +90,7 @@ public class ImagenDao {
             rs = st.executeQuery();
             while (rs.next()) {
                 
-                list.add(new Imagen(rs.getInt(1),rs.getString(2), new Producto(rs.getInt(3)),
-                		rs.getString(4)));
+                list.add(new Imagen(rs.getInt(1),rs.getString(2),rs.getString(3)));
                 
             }
         } catch (SQLException e) {

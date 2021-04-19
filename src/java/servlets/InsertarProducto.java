@@ -7,16 +7,12 @@ import domain.Producto;
 import exceptions.DomainException;
 import exceptions.ServiceException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import servicios.ServicioDescuento;
-import servicios.ServicioFamilias;
-import servicios.ServicioImagen;
+import util.Fecha;
 import servicios.ServicioProducto;
 
 /**
@@ -60,16 +56,19 @@ public class InsertarProducto extends HttpServlet {
         String salida = null;
         int idProducto = 0;
         String insertadoExitoso= null;
+        java.sql.Date fecha;
 
         try {
 
             productoServicio = new ServicioProducto();
             idProducto = productoServicio.idProducto()+1;
+            fecha =Fecha.fechaActualDate();
+            System.out.println(fecha);
 
-            productoServicio.insertarProducto(new Producto(idProducto, request.getParameter("nombre"),
-                    new Familias(Integer.parseInt(request.getParameter("familias"))), Double.parseDouble(request.getParameter("precio")),
-                    request.getParameter("descripcion"), new Imagen(Integer.parseInt(request.getParameter("Imagen"))),
-                    new Descuento(Integer.parseInt(request.getParameter("Descuento")))));
+            productoServicio.insertarProducto(new Producto(idProducto, request.getParameter("nombre"),Double.parseDouble(request.getParameter("precio")),
+                    new Familias(Integer.parseInt(request.getParameter("familias"))),new Descuento(Integer.parseInt(request.getParameter("Descuento"))), 
+                     new Imagen(Integer.parseInt(request.getParameter("Imagen"))),
+                    fecha ,request.getParameter("descripcion")));
 
             salida = "/FormularioProducto";
             insertadoExitoso= "Se ha añadido nuevo producto con exito! ";

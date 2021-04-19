@@ -7,8 +7,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
-import domain.Cliente;
 import domain.Descuento;
 import domain.Familias;
 import domain.Imagen;
@@ -40,11 +38,12 @@ public class ProductoDao {
 			st = con.prepareStatement(DbQuery.getInsertarproductos());
 			st.setInt(1, producto.getCod_pro());                       
 			st.setString(2, producto.getNom_pro());
-			st.setInt(3, producto.getCod_fam().getCod_fam());
-			st.setDouble(4, producto.getPrecio());
-			st.setString(5, producto.getDesc_pro());
+                        st.setDouble(3, producto.getPrecio());
+			st.setInt(4, producto.getCod_fam().getCod_fam());
+			st.setInt(5, producto.getCod_des().getCod_des());
 			st.setInt(6, producto.getCod_img().getCod_img());
-			st.setInt(7, producto.getCod_des().getCod_des());
+                        st.setDate(7, producto.getFecha_pro());			
+                        st.setString(8, producto.getDesc_pro());
 			st.executeUpdate();
 
 		} catch (SQLException e) {
@@ -97,8 +96,30 @@ public class ProductoDao {
             rs = st.executeQuery();
             while (rs.next()) {
 
-                list.add(new Producto(rs.getInt(1),rs.getString(2), new Familias(rs.getInt(3)),rs.getDouble(4),
-                		rs.getString(5), new Imagen(rs.getInt(6)),new Descuento(rs.getInt(7))));
+                list.add(new Producto(rs.getInt(1),rs.getString(2),rs.getDouble(3), new Familias(rs.getInt(4)),new Descuento(rs.getInt(5))
+                		, new Imagen(rs.getInt(6)), rs.getDate(7),rs.getString(8)));
+            }
+        } catch (SQLException e) {
+            throw new DAOException(DB_ERR, e);
+        } finally {// cerramos cursores  y ResulSet
+            Recursos.closeResultSet(rs);
+            Recursos.closePreparedStatement(st);
+        }
+        return list;
+	}
+        
+        public List<Producto> recuperarProductosPrincipal() throws DAOException{
+		PreparedStatement st = null;
+        ResultSet rs = null;
+        List<Producto> list = new ArrayList<Producto>();
+        
+        try {
+            st = con.prepareStatement(DbQuery.getRecuperarProductosPrincipal());
+            rs = st.executeQuery();
+            while (rs.next()) {
+
+                list.add(new Producto(rs.getInt(1),rs.getString(2),rs.getDouble(3), new Familias(rs.getInt(4)),new Descuento(rs.getInt(5))
+                		, new Imagen(rs.getInt(6)), rs.getDate(7),rs.getString(8)));
             }
         } catch (SQLException e) {
             throw new DAOException(DB_ERR, e);

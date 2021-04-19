@@ -103,5 +103,36 @@ public class ServicioProducto {
 
 		return list;
 	}
+        
+        	public List<Producto> recuperarTodosProductoPrincipal() throws ServiceException {
+
+		TransaccionesManager trans = null;
+		List<Producto> list = new ArrayList<Producto>();
+
+		try {
+
+			trans = new TransaccionesManager();
+			ProductoDao productoDao = trans.getProductoDao();
+			list = productoDao.recuperarProductosPrincipal();
+			trans.closeCommit();
+		} catch (DAOException e) {
+			try {
+				if (trans != null)
+					trans.closeRollback();
+			} catch (DAOException e1) {
+				throw new ServiceException(e.getMessage(), e1);// Error interno
+			}
+
+			if (e.getCause() == null) {
+				throw new ServiceException(e.getMessage());// Error Logico
+			} else {
+
+				throw new ServiceException(e.getMessage(), e);// Error interno
+			}
+
+		}
+
+		return list;
+	}
 
 }

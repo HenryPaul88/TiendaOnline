@@ -4,14 +4,12 @@ public class Imagen {
 	
 	private int cod_img;
 	private String ruta;
-	private Producto producto;
 	private String ruta_abs;
 	
 	
-	public Imagen(int cod_img, String ruta, Producto producto, String ruta_abs) {
+	public Imagen(int cod_img, String ruta, String ruta_abs) {
 		this.cod_img = cod_img;
 		this.ruta = ruta;
-		this.producto = producto;
 		this.ruta_abs = ruta_abs;
 	}
 
@@ -40,16 +38,6 @@ public class Imagen {
 
 	public void setRuta(String ruta) {
 		this.ruta = ruta;
-	}
-
-
-	public Producto getProducto() {
-		return producto;
-	}
-
-
-	public void setProducto(Producto producto) {
-		this.producto = producto;
 	}
 
 

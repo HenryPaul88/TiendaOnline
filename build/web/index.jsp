@@ -24,52 +24,10 @@
         <!-- fotos  -->
         <div class="container">
             <h2> Todos lo que buscas  </h2>
-            <div class="col-sm-12">
-                <div class="form-row">
-                    <div class="col-sm-2"></div>
-                    <div class="col">
-                        <img src="imagen/globo-amarrillo.jpg">
-                        <p id="precio">20 EUROS</p>
-                    </div>
-                    <div class="col-sm-4"></div>
-                    <div class="col">
-                        <img src="imagen/Globo-azul.jpg">
-                        <p id="precio">20 EUROS</p>
-                    </div>
-
-
-                </div>
-            </div>
-            <div class="col-sm-12">
-                <div class="form-row">
-                    <div class="col-sm-2"></div>
-                    <div class="col">
-                        <img src="imagen/DiaDeLaMadre/Regalo-Madre-30.png">
-                        <p id="precio">40 EUROS</p>
-                    </div>
-                    <div class="col-sm-4"></div>
-                    <div class="col">
-                        <img src="imagen/DiaDeLaMadre/Regalo-Madre-20.jpg">
-                        <p id="precio">25 EUROS</p>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-sm-12">
-                <div class="form-row">
-                    <div class="col-sm-2"></div>
-                    <div class="col">
-                        <img src="imagen/Regalo-Padre-30.png">
-                        <p id="precio">40 EUROS</p>
-                    </div>
-                    <div class="col-sm-4"></div>
-                    <div class="col">
-                        <img src="imagen/Regalo-Padre-20.jpg">
-                        <p id="precio">25 EUROS</p>
-                    </div>
-
-                </div>
-            </div>
+            
+          
+            
+            <!-- Previous  -->
             <div class="pag">
                 <ul class="pagination">
                     <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
