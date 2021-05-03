@@ -11,6 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <%@ include file="incluir/bootstrap.jsp"%>
         <link rel="stylesheet" href="CSS/registrar.css">
+        <link rel="stylesheet" href="CSS/estilos.css">
         <title>Registrar</title>
 
     <body>
@@ -138,7 +139,7 @@
 
         <!-- footer  -->
         <%@ include file="incluir/footer.jsp" %> 
-
+        <script src="JS/menu.js"></script>
     </body>
 
 </html>

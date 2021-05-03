@@ -12,7 +12,7 @@
         <%@ include file="incluir/bootstrap.jsp"%>
         <link rel="stylesheet" href="CSS/login.css">
         <title>Iniciar Sesion</title>
-        
+        <link rel="stylesheet" href="CSS/estilos.css">
     </head>
 
     <body>
@@ -37,13 +37,14 @@
                 <input type="submit" value="Entrar">
                 <div class="preguntas">
                     <a href="#">Olvidaste tu contrase&ntildea?</a><br>
-                    <a href="#">No tengo una cuenta?</a>
+                    <a href="Registrar.jsp">Registrarse</a>
                 </div>	
             </form>
         </div>
 
         <!-- footer  -->
         <%@ include file="incluir/footer.jsp" %>
+        <script src="JS/menu.js"></script>
     </body>
 
 </html>

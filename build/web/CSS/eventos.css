@@ -1,0 +1,118 @@
+.main__title {
+    text-align: center;
+    width: 100%;
+    color: #555;
+}
+
+.main__txt {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    color: rgb(243, 85, 243);
+    font-size: 1.8em;
+    border-bottom:1px solid #555;
+}
+.container-evento{
+    margin-top: 10%;
+}
+.evento__title {
+   
+    width: 70%;
+    background: blue;
+    color: white;
+    text-align: center;
+    margin-left: 15%;
+    margin-right:15%;
+}
+
+.evento__txt {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    font-size: 18px;
+    
+}
+
+.carousel {
+    width: 100%; 
+    margin-bottom: 10%;
+}
+img{
+    width: 100%; 
+}
+
+.carousel-inner{
+    box-shadow: 0 0 0 10px rgb(255, 255, 255), 0 5px 30px; 
+    
+}
+
+@media screen and (min-width:768px) {
+    .main__title {
+        font-size: 2.5em;
+    }
+    
+    .main__txt {
+        font-size: 2em;
+        
+    }
+    .evento__title {
+        width: 60%;
+        margin-left: 20%;
+    }
+    .evento__txt {
+        font-size: 1.3em;
+    }
+    .main-evento{
+        width: 700px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .main__title {
+        font-size: 2.8em;
+    }
+    
+    .main__txt {
+        font-size: 2.2em;
+        
+    }
+    .evento__title {
+        font-size: 1.8em;
+        margin-bottom: 10%;
+    }
+    .evento__txt {
+        font-size: 1.5em;
+        line-height: 30px;
+    }
+    .evento{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .main-evento{
+        width: 1000px;
+        margin: auto;
+    }
+    
+}
+
+@media screen and (min-width:1280px) {
+    .evento__txt {
+        
+        line-height: 32px;
+    }
+    .main-evento{
+        width: 1200px;
+        margin: auto;
+    }
+}
+@media screen and (min-width:1600px) {
+    .evento__txt {
+        
+        line-height: 35px;
+    }
+    .main-evento{
+        width: 1600px;
+        margin: auto;
+    }
+}

@@ -1,24 +1,61 @@
-<div id="demo" class="carousel slide" data-ride="carousel">
-        <ul class="carousel-indicators">
-            <li data-target="#demo" data-slide-to="0" class="active"></li>
-            <li data-target="#demo" data-slide-to="1"></li>
-            <li data-target="#demo" data-slide-to="2"></li>
-        </ul>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="imagen/portada.png" alt="Los Angeles">
+    <div class="container-slider">
+
+        <div class="slider" id="slider">
+
+            <div class="slider__section">
+                <img src="imagen/Globo-azul.jpg" alt="" class="slider__img">
+                <div class="slider__content">
+                    <h2 class="slider__title">
+                        Men Eyewear
+                    </h2>
+                    <p class="slider__txt">
+                        cool summer sale 50% off
+                    </p>
+                    <a href="" class="btn-shop">Shop now</a>
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="imagen/portada.png" alt="Chicago">
+
+            <div class="slider__section">
+                <img src="imagen/Globo-azul.jpg" alt="" class="slider__img">
+                <div class="slider__content">
+                    <h2 class="slider__title">
+                        Mens Eyewear
+                    </h2>
+                    <p class="slider__txt">
+                        cool summer sale 50% off
+                    </p>
+                    <a href="" class="btn-shop">Shop now</a>
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="imagen/delivery.png" alt="New York">
+
+            <div class="slider__section">
+                <img src="imagen/Globo-azul.jpg" alt="" class="slider__img">
+                <div class="slider__content">
+                    <h2 class="slider__title">
+                        Men Eyewear
+                    </h2>
+                    <p class="slider__txt">
+                        cool summer sale 50% off
+                    </p>
+                    <a href="" class="btn-shop">Shop now</a>
+                </div>
             </div>
+
+            <div class="slider__section">
+                <img src="imagen/Globo-azul.jpg" alt="" class="slider__img">
+                <div class="slider__content">
+                    <h2 class="slider__title">
+                        Men Eyewear
+                    </h2>
+                    <p class="slider__txt">
+                        cool summer sale 50% off
+                    </p>
+                    <a href="" class="btn-shop">Shop now</a>
+                </div>
+            </div>
+
         </div>
-        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#demo" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
+        <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
+        <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
     </div>
+

@@ -1,13 +1,13 @@
 package listener;
 
 import java.util.List;
-import domain.Familias;
-import servicios.ServicioFamilias;
+import domain.Producto;
 import exceptions.ServiceException;
 import java.util.ArrayList;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
+import servicios.ServicioProducto;
 
 @WebListener
 public class listener1 implements ServletContextListener {
@@ -18,7 +18,8 @@ public class listener1 implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
 
-     
+        
+
     }
 
     @Override
@@ -26,5 +27,4 @@ public class listener1 implements ServletContextListener {
         // TODO Auto-generated method stub
     }
 
- 
 }

@@ -1,5 +1,6 @@
 package domain;
 
+import java.io.InputStream;
 import java.sql.Date;
 
 public class Producto {
@@ -9,18 +10,18 @@ public class Producto {
     private double precio;
     private Familias cod_fam;
     private Descuento cod_des;
-    private Imagen cod_img;
+    private InputStream img;
     private Date fecha_pro;
     private String desc_pro;
 
-    public Producto(int cod_pro, String nom_pro ,double precio, Familias cod_fam,Descuento cod_des, Imagen cod_img,
+    public Producto(int cod_pro, String nom_pro ,double precio, Familias cod_fam,Descuento cod_des, InputStream img,
             Date fecha_pro, String desc_pro) {
         this.cod_pro = cod_pro;
         this.nom_pro = nom_pro;
         this.cod_fam = cod_fam;
         this.precio = precio;
         this.desc_pro = desc_pro;
-        this.cod_img = cod_img;
+        this.img = img;
         this.fecha_pro = fecha_pro;
         this.cod_des = cod_des;
     }
@@ -80,12 +81,12 @@ public class Producto {
         this.desc_pro = desc_pro;
     }
 
-    public Imagen getCod_img() {
-        return cod_img;
+    public InputStream getImg() {
+        return img;
     }
 
-    public void setCod_img(Imagen cod_img) {
-        this.cod_img = cod_img;
+    public void setImg(InputStream img) {
+        this.img = img;
     }
 
     public Descuento getCod_des() {

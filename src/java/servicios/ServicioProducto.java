@@ -8,131 +8,163 @@ import daos.TransaccionesManager;
 import domain.Producto;
 import exceptions.DAOException;
 import exceptions.ServiceException;
+import javax.servlet.http.HttpServletResponse;
 
 public class ServicioProducto {
 
-	public ServicioProducto() {
-	}
+    public ServicioProducto() {
+    }
 
-	public void insertarProducto(Producto producto) throws ServiceException {
-		TransaccionesManager trans = null;
-		try {
+    public void insertarProducto(Producto producto) throws ServiceException {
+        TransaccionesManager trans = null;
+        try {
 
-			trans = new TransaccionesManager();
-			ProductoDao productoDAO = trans.getProductoDao();
-			productoDAO.insertarProducto(producto);
+            trans = new TransaccionesManager();
+            ProductoDao productoDAO = trans.getProductoDao();
+            productoDAO.insertarProducto(producto);
 
-			trans.closeCommit();
-		} catch (DAOException e) {
+            trans.closeCommit();
+        } catch (DAOException e) {
 
-			try {
-				if (trans != null) {
-					trans.closeRollback();
-				}
-			} catch (DAOException e1) {
-				throw new ServiceException(e.getMessage(), e1);// Error interno
-			}
+            try {
+                if (trans != null) {
+                    trans.closeRollback();
+                }
+            } catch (DAOException e1) {
+                throw new ServiceException(e.getMessage(), e1);// Error interno
+            }
 
-			if (e.getCause() == null) {
-				throw new ServiceException(e.getMessage());// Error L0gico
-			} else {
+            if (e.getCause() == null) {
+                throw new ServiceException(e.getMessage());// Error L0gico
+            } else {
 
-				throw new ServiceException(e.getMessage(), e);// Error interno
-			}
+                throw new ServiceException(e.getMessage(), e);// Error interno
+            }
 
-		}
-	}
+        }
+    }
 
-	public int idProducto() throws ServiceException {
+    public int idProducto() throws ServiceException {
 
-		TransaccionesManager trans = null;
-		int id = 0;
+        TransaccionesManager trans = null;
+        int id = 0;
 
-		try {
-			trans = new TransaccionesManager();
-			ProductoDao productodao = trans.getProductoDao();
-			id = productodao.idProducto();
+        try {
+            trans = new TransaccionesManager();
+            ProductoDao productodao = trans.getProductoDao();
+            id = productodao.idProducto();
 
-			trans.closeCommit();
-		} catch (DAOException e) {
-			try {
-				if (trans != null)
-					trans.closeRollback();
-			} catch (DAOException e1) {
-				throw new ServiceException(e.getMessage(), e1);// Error interno
-			}
+            trans.closeCommit();
+        } catch (DAOException e) {
+            try {
+                if (trans != null) {
+                    trans.closeRollback();
+                }
+            } catch (DAOException e1) {
+                throw new ServiceException(e.getMessage(), e1);// Error interno
+            }
 
-			if (e.getCause() == null) {
-				throw new ServiceException(e.getMessage());// Error L�gico
-			} else {
+            if (e.getCause() == null) {
+                throw new ServiceException(e.getMessage());// Error L�gico
+            } else {
 
-				throw new ServiceException(e.getMessage(), e);// Error interno
-			}
+                throw new ServiceException(e.getMessage(), e);// Error interno
+            }
 
-		}
-		return id;
-	}
+        }
+        return id;
+    }
 
-	public List<Producto> recuperarTodosProducto() throws ServiceException {
+    public List<Producto> recuperarTodosProducto() throws ServiceException {
 
-		TransaccionesManager trans = null;
-		List<Producto> list = new ArrayList<Producto>();
+        TransaccionesManager trans = null;
+        List<Producto> list = new ArrayList<Producto>();
 
-		try {
+        try {
 
-			trans = new TransaccionesManager();
-			ProductoDao productoDao = trans.getProductoDao();
-			list = productoDao.recuperarProductos();
-			trans.closeCommit();
-		} catch (DAOException e) {
-			try {
-				if (trans != null)
-					trans.closeRollback();
-			} catch (DAOException e1) {
-				throw new ServiceException(e.getMessage(), e1);// Error interno
-			}
+            trans = new TransaccionesManager();
+            ProductoDao productoDao = trans.getProductoDao();
+            list = productoDao.recuperarProductos();
+            trans.closeCommit();
+        } catch (DAOException e) {
+            try {
+                if (trans != null) {
+                    trans.closeRollback();
+                }
+            } catch (DAOException e1) {
+                throw new ServiceException(e.getMessage(), e1);// Error interno
+            }
 
-			if (e.getCause() == null) {
-				throw new ServiceException(e.getMessage());// Error L�gico
-			} else {
+            if (e.getCause() == null) {
+                throw new ServiceException(e.getMessage());// Error L�gico
+            } else {
 
-				throw new ServiceException(e.getMessage(), e);// Error interno
-			}
+                throw new ServiceException(e.getMessage(), e);// Error interno
+            }
 
-		}
+        }
 
-		return list;
-	}
-        
-        	public List<Producto> recuperarTodosProductoPrincipal() throws ServiceException {
+        return list;
+    }
 
-		TransaccionesManager trans = null;
-		List<Producto> list = new ArrayList<Producto>();
+    public List<Producto> recuperarTodosProductoPrincipal() throws ServiceException {
 
-		try {
+        TransaccionesManager trans = null;
+        List<Producto> list = new ArrayList<Producto>();
 
-			trans = new TransaccionesManager();
-			ProductoDao productoDao = trans.getProductoDao();
-			list = productoDao.recuperarProductosPrincipal();
-			trans.closeCommit();
-		} catch (DAOException e) {
-			try {
-				if (trans != null)
-					trans.closeRollback();
-			} catch (DAOException e1) {
-				throw new ServiceException(e.getMessage(), e1);// Error interno
-			}
+        try {
 
-			if (e.getCause() == null) {
-				throw new ServiceException(e.getMessage());// Error Logico
-			} else {
+            trans = new TransaccionesManager();
+            ProductoDao productoDao = trans.getProductoDao();
+            list = productoDao.recuperarProductosPrincipal();
+            trans.closeCommit();
+        } catch (DAOException e) {
+            try {
+                if (trans != null) {
+                    trans.closeRollback();
+                }
+            } catch (DAOException e1) {
+                throw new ServiceException(e.getMessage(), e1);// Error interno
+            }
 
-				throw new ServiceException(e.getMessage(), e);// Error interno
-			}
+            if (e.getCause() == null) {
+                throw new ServiceException(e.getMessage());// Error Logico
+            } else {
 
-		}
+                throw new ServiceException(e.getMessage(), e);// Error interno
+            }
 
-		return list;
-	}
+        }
+
+        return list;
+    }
+
+    public void recuperarImg(int id, HttpServletResponse response) throws ServiceException{
+        TransaccionesManager trans = null;
+
+        try {
+
+            trans = new TransaccionesManager();
+            ProductoDao productoDao = trans.getProductoDao();
+            productoDao.recuperarImg(id, response);
+            trans.closeCommit();
+        } catch (DAOException e) {
+            try {
+                if (trans != null) {
+                    trans.closeRollback();
+                }
+            } catch (DAOException e1) {
+                throw new ServiceException(e.getMessage(), e1);// Error interno
+            }
+
+            if (e.getCause() == null) {
+                throw new ServiceException(e.getMessage());// Error Logico
+            } else {
+
+                throw new ServiceException(e.getMessage(), e);// Error interno
+            }
+
+        }
+    }
 
 }

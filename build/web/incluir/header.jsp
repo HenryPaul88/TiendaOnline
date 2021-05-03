@@ -1,82 +1,38 @@
-<div class="container-fluid">
-
-        <div class="header">
-            <div class="nav justify-content-end">
-                <div class="col-sm-12">
-
-                    <nav class="cabecera">
-                        <ul class="nav justify-content-end ">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.jsp" style="color: rgb(48, 34, 34);"><u>Inicio</u></a>
-        
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" style="color: rgb(48, 34, 34);"><u>Quienes Somos</u></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" style="color: rgb(48, 34, 34);"><u>Contacto</u></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" style="color: rgb(48, 34, 34);"><u>Regalos</u></a>
-                            </li>
-                        </ul>
-                    </nav>
+    <header class="main-header">
+        <div class="container container--flex">
+                <div id="logo-container">
+                    <img src="imagen/logo.png" height="150px" width="150px">
                 </div>
+            <div class="main-header__container">
+                <h1 class="main-header__title">Marie Party Decorationes</h1>
+                <span class="icon-menu" id="btn-menu"><i class="fas fa-bars"></i> Menu</span>
+                <nav class="main-nav" id="main-nav">
+                    <ul class="menu" id="menu">
+                        <li class="menu__item"><a href="index.jsp" class="menu__link">Inicio</a></li>
+                        <li class="menu__item container-submenu">
+                            <a href="#" class="menu__link submenu-btn">Productos <i class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li class="menu__item"><a href="RecuperarProductos" class="menu__link">Todos los productos</a></li>
+                                <li class="menu__item"><a href="" class="menu__link">Tartas</a></li>
+                                <li class="menu__item"><a href="" class="menu__link">Regalos</a></li>
+                                <li class="menu__item"><a href="" class="menu__link">Candy Bar</a></li>
+                                <li class="menu__item"><a href="" class="menu__link">Articulos</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu__item"><a href="eventos.jsp" class="menu__link">Evento</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Reposteria</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Sobre mi</a></li>
+                        <li class="menu__item"><a href="FormularioProducto" class="menu__link">Contacto</a></li>
+                        
+                    </ul>
+                </nav>
             </div>
+            <div class="main-header__container">
+                <a href="IniciarSesion.jsp" class="main-header__link"><i  class="fas fa-user"></i> Iniciar Sesion</a>
+                <a href="" class="main-header__btn">My cart <i class="fas fa-shopping-cart"></i>(0)</a>
+                <input type="search" class="main-header__input" placeholder="Buscar productos">
+                <i  class="fas fa-search"></i>
 
-            <form>
-                <div class="con">
-                    <div class="col-sm-12">
-                        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-                            <div class="col">
-                                <h1>Little Smile</h1>
-                                <p id=titulo>D&eacutejanos ser tus c&oacutemplices, para entregar esta linda sorpresa</p>
-                            </div>
-                            <div class="col-sm-4">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                            </div>
-                            <div class="col">
-                                <button class="btn btn-success" type="button" >Search</button>
-                            </div>
-                             <div class="col-sm-2">
-                            	<a href="FormularioProducto"> <button class="btn btn-primary" type="button" >Añadir Productos</button> </a>
-                                
-                            </div>
-                            <div class="col-sm-1">
-                              <a href="Registrar.jsp">  <button class="btn btn-primary" type="button">Registrate</button></a>
-                            </div>
-                            <div class="col-sm-2">
-                            	<a href="IniciarSesion.jsp"> <button class="btn btn-primary" type="button" >Iniciar Sesion</button> </a>
-                                
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </form>
-         
-              
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="tienda.html" >PARA HOMBRES</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="tienda.html" >PARA MUJERES</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="tienda.html" >PARA NI&NtildeOS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="tienda.html" >DIA DE LA MADRE</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="tienda.html" >SAN VALENTIN</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="tienda.html" >TARTAS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="tienda.html" >REGALOS</a>
-                </li>
-            
-            </ul>
+            </div>
         </div>
-    </div>
+    </header>

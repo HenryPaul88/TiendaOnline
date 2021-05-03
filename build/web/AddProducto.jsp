@@ -13,9 +13,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-
         <%@ include file="incluir/bootstrap.jsp"%>
+        <link rel="stylesheet" href="CSS/estilos.css">
         <title>Añadir Productos</title>
 
     </head>
@@ -34,7 +33,7 @@
                 <p style="color: green"> ${Insertado} </p>
 
                 <!-- 1 -->
-                <form ACTION="InsertarProducto" method="POST">
+                <form ACTION="InsertarProducto?accion=Guardar" method="POST" enctype="multipart/form-data">
 
                     <div class="col-sm-6">                 
                         <div class="input-group mb-4">
@@ -144,31 +143,9 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Imagen:(*)</span>
                             </div>
-
-                            <select name="Imagen">
-
-                                <%
-                                    List<Imagen> listaImagen = (List<Imagen>) request.getAttribute("imagenes");
-
-                                    for (int i = 0; i < listaImagen.size(); i++) {
-
-                                        if (listaImagen.size() != 0) {
-                                            if (i == 0) {
-
-                                %>
-                                <option value=<%= listaImagen.get(i).getCod_img()%> selected> <%= listaImagen.get(i).getRuta()%> </option>
-                                <% 	} else {
-                                %>
-                                <option value=<%= listaImagen.get(i).getCod_img()%> > <%= listaImagen.get(i).getRuta()%> </option>
-                                <%
-                                    }
-                                } else {
-                                %>
-                                <option value=1>vacio</option>
-                                <%        }
-                                    }
-                                %>
-                            </select>
+                            <input type="file" name="foto" id="fotoid" class="form-control" >
+                                   
+                            
                         </div>
                     </div>
 
@@ -179,7 +156,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Descripcion:(*)</span>
                             </div>
-                            <textarea id="descripcion" name="descripcion" rows="4" cols="150" style="border:solid blue"></textarea>
+                            <textarea id="descripcion"  name="descripcion" rows="10" cols="250" style="border:solid blue"></textarea>
                         </div>
 
                     </div>
@@ -191,7 +168,7 @@
                         <p>Obligatorio (*)</p>
 
                         <div class="input-group mb-4">
-                            <input class="btn btn-primary" type="submit" value="Enviar">
+                            <input class="btn btn-primary" type="submit" value="Guardar">
                         </div>
 
                     </div>

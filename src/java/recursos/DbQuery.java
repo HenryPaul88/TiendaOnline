@@ -11,8 +11,9 @@ public class DbQuery {
     // productos
     private static final String IdProductos = "select max(cod_pro) from Producto";
     private static final String RecuperarProductos = "select cod_pro, cod_fam, nom_pro, precio, desc_pro, cod_img, cod_des from Producto";
-    private static final String RecuperarProductosPrincipal = "select cod_pro, cod_fam, nom_pro, precio, desc_pro, cod_img, cod_des from Producto where cod_fam = 5";
+    private static final String RecuperarProductosPrincipal = "select cod_pro, nombre_pro, precio, cod_fam, cod_des , imagen_principal, fecha_pro, descripcion from Producto where cod_fam = 5";
     private static final String InsertarProductos = "insert into Producto values(?,?,?,?,?,?,?,?)";
+    private static final String RecuperarProductosImg = "select cod_pro, nombre_pro, precio, cod_fam, cod_des , imagen_principal, fecha_pro, descripcion from Producto where cod_pro= ?";
     private static final String BorrarProductos = "";
     private static final String ModificarProductos = "";
 
@@ -247,6 +248,10 @@ public class DbQuery {
 
     public static String getModificarlinpedido() {
         return ModificarLinPedido;
+    }
+    
+    public static String getRecuperarProductosImg() {
+        return RecuperarProductosImg;
     }
 
 }
