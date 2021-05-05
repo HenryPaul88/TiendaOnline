@@ -10,8 +10,7 @@ public class DbQuery {
     private static final String ModificarCliente = "";
     // productos
     private static final String IdProductos = "select max(cod_pro) from Producto";
-    private static final String RecuperarProductos = "select cod_pro, cod_fam, nom_pro, precio, desc_pro, cod_img, cod_des from Producto";
-    private static final String RecuperarProductosPrincipal = "select cod_pro, nombre_pro, precio, cod_fam, cod_des , imagen_principal, fecha_pro, descripcion from Producto where cod_fam = 5";
+    private static final String RecuperarProductos = "select cod_pro, nombre_pro, precio, cod_fam, cod_des , imagen_principal, fecha_pro, descripcion from Producto";
     private static final String InsertarProductos = "insert into Producto values(?,?,?,?,?,?,?,?)";
     private static final String RecuperarProductosImg = "select cod_pro, nombre_pro, precio, cod_fam, cod_des , imagen_principal, fecha_pro, descripcion from Producto where cod_pro= ?";
     private static final String BorrarProductos = "";
@@ -92,10 +91,6 @@ public class DbQuery {
 
     public static String getRecuperarproductos() {
         return RecuperarProductos;
-    }
-
-    public static String getRecuperarProductosPrincipal() {
-        return RecuperarProductosPrincipal;
     }
 
     public static String getInsertarproductos() {

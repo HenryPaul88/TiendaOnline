@@ -98,7 +98,7 @@ public class ProductoDao {
             st = con.prepareStatement(DbQuery.getRecuperarproductos());
             rs = st.executeQuery();
             while (rs.next()) {
-
+                System.out.println("dao prductos gg");
                 list.add(new Producto(rs.getInt(1), rs.getString(2), rs.getDouble(3), new Familias(rs.getInt(4)), new Descuento(rs.getInt(5)),
                          rs.getBinaryStream(6), rs.getDate(7), rs.getString(8)));
             }
@@ -111,27 +111,6 @@ public class ProductoDao {
         return list;
     }
 
-    public List<Producto> recuperarProductosPrincipal() throws DAOException {
-        PreparedStatement st = null;
-        ResultSet rs = null;
-        List<Producto> list = new ArrayList<Producto>();
-
-        try {
-            st = con.prepareStatement(DbQuery.getRecuperarProductosPrincipal());
-            rs = st.executeQuery();
-            while (rs.next()) {
-
-                list.add(new Producto(rs.getInt(1), rs.getString(2), rs.getDouble(3), new Familias(rs.getInt(4)), new Descuento(rs.getInt(5)),
-                         rs.getBinaryStream(6), rs.getDate(7), rs.getString(8)));
-            }
-        } catch (SQLException e) {
-            throw new DAOException(DB_ERR, e);
-        } finally {// cerramos cursores  y ResulSet
-            Recursos.closeResultSet(rs);
-            Recursos.closePreparedStatement(st);
-        }
-        return list;
-    }
     
     public void recuperarImg(int id, HttpServletResponse response){
         PreparedStatement st = null;

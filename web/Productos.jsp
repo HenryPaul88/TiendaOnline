@@ -29,6 +29,7 @@
                         List<Producto> lista=(List<Producto>)request.getAttribute("producto");
                         
                             for(int i=0;i<lista.size();i++){
+                                System.out.println(lista.size());
 			
                                 if (i==0){
                         %>

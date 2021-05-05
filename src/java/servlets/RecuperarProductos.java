@@ -42,12 +42,13 @@ public class RecuperarProductos extends HttpServlet {
         String salida = null;
         
         try {
-            System.out.println("llego aqui prductos 1");
+         
             productoServicio = new ServicioProducto();
             listaProducto = productoServicio.recuperarTodosProducto();
+            
             request.setAttribute("producto", listaProducto);
-            salida = "Productos.jsp";
-            System.out.println("llego aqui prductos 2");
+            salida = "/Productos.jsp";
+            System.out.println(listaProducto.size());
             
             
         } catch (ServiceException | DomainException e) {
