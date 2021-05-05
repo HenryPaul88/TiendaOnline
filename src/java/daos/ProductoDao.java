@@ -98,7 +98,7 @@ public class ProductoDao {
             st = con.prepareStatement(DbQuery.getRecuperarproductos());
             rs = st.executeQuery();
             while (rs.next()) {
-                System.out.println("dao prductos gg");
+                
                 list.add(new Producto(rs.getInt(1), rs.getString(2), rs.getDouble(3), new Familias(rs.getInt(4)), new Descuento(rs.getInt(5)),
                          rs.getBinaryStream(6), rs.getDate(7), rs.getString(8)));
             }

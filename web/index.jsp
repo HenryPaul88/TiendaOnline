@@ -17,6 +17,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Marie Party</title>
         <link rel="stylesheet" href="CSS/style-contenedor.css" />
+        <%@ include file="incluir/bootstrap.jsp"%>
         <link rel="stylesheet" href="CSS/estilos.css">
         <link rel="icon" type="image/png" href="imagen/logo.png">
     </head>

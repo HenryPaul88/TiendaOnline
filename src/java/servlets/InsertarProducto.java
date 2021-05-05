@@ -5,7 +5,6 @@ import domain.Familias;
 import domain.Producto;
 import exceptions.DomainException;
 import exceptions.ServiceException;
-import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -37,11 +36,7 @@ public class InsertarProducto extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-    /**
-     * @param request
-     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-     * response)
-     */
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO Auto-generated method stub
@@ -49,11 +44,7 @@ public class InsertarProducto extends HttpServlet {
 
     }
 
-    /**
-     * @param request
-     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-     * response)
-     */
+  
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO Auto-generated method stub

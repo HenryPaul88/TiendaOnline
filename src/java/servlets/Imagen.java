@@ -21,19 +21,19 @@ import servicios.ServicioProducto;
  */
 @WebServlet(name = "Imagen", urlPatterns = {"/Imagen"})
 public class Imagen extends HttpServlet {
-
+    int id=0;
 
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("entro srvlet imagen h");
-        int id = Integer.parseInt(request.getParameter("id"));
+        
+        id = Integer.parseInt(request.getParameter("id"));
         System.out.println(id);
         ServicioProducto productoServicio;
         String salida=null;
         try {
-            System.out.println("entro srvlet imagen h2");
+            
             productoServicio = new ServicioProducto();
             productoServicio.recuperarImg(id, response);
         } catch (ServiceException | DomainException e) {

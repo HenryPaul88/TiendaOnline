@@ -13,8 +13,8 @@
                             <a href="#" class="menu__link submenu-btn">Productos <i class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
                                 <li class="menu__item"><a href="RecuperarProductos" class="menu__link">Todos los productos</a></li>
-                                <li class="menu__item"><a href="" class="menu__link">Tartas</a></li>
-                                <li class="menu__item"><a href="" class="menu__link">Regalos</a></li>
+                                <li class="menu__item"><a href="RecuperarProductos?familia=1" class="menu__link">Tartas</a></li>
+                                <li class="menu__item"><a href="RecuperarProductos?familia=2" class="menu__link">Regalos</a></li>
                                 <li class="menu__item"><a href="" class="menu__link">Candy Bar</a></li>
                                 <li class="menu__item"><a href="" class="menu__link">Articulos</a></li>
                             </ul>

@@ -25,32 +25,51 @@ import servicios.ServicioProducto;
 @WebServlet(name = "RecuperarProductos", urlPatterns = {"/RecuperarProductos"})
 public class RecuperarProductos extends HttpServlet {
 
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        doPost(request,response);
+        doPost(request, response);
     }
-
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         ServicioProducto productoServicio;
-        List<Producto> listaProducto= new ArrayList<>();
+        List<Producto> listaProducto = new ArrayList<>();
         String salida = null;
-        
+        String familia;
+
         try {
-         
+
             productoServicio = new ServicioProducto();
             listaProducto = productoServicio.recuperarTodosProducto();
-            
             request.setAttribute("producto", listaProducto);
+            boolean encontrado=true;
+            familia = (request.getParameter("familia"));
+            if(familia!=null){
+                int cod_fam= Integer.parseInt(familia);
+                 switch (cod_fam) {
+                
+                case 1:
+                    
+                    while(encontrado){
+                            encontrado=buscar(listaProducto,cod_fam);
+                    }
+                    break;
+                case 2:
+                    
+                    while(encontrado){
+                            encontrado=buscar(listaProducto,cod_fam);
+                    }
+                    break;
+                default:
+
+            }
+                
+            }
+
             salida = "/Productos.jsp";
-            System.out.println(listaProducto.size());
-            
-            
         } catch (ServiceException | DomainException e) {
             if (e.getCause() == null) {//Error Logico para usuario
                 request.setAttribute("error", e.getMessage());
@@ -66,6 +85,16 @@ public class RecuperarProductos extends HttpServlet {
         }
         getServletContext().getRequestDispatcher(salida).forward(request, response);
     }
-
+    
+    public boolean buscar(List<Producto> lista,int elem){
+        boolean encontrado=false;
+        for (int i = 0; i < lista.size() && !encontrado; i++) {
+                if(lista.get(i).getCod_fam().getCod_fam()!=elem){
+                    lista.remove(i);
+                    encontrado=true;
+                }
+        }
+        return encontrado;
+    }
 
 }
