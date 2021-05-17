@@ -21,7 +21,7 @@ import servicios.ServicioProducto;
  */
 @WebServlet(name = "Imagen", urlPatterns = {"/Imagen"})
 public class Imagen extends HttpServlet {
-    int id=0;
+    int id;
 
 
     @Override

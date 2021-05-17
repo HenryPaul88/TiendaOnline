@@ -3,28 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/henry/NetBeansProjects/Regalos/web/JS/menu.js</file>
             <file>file:/home/henry/NetBeansProjects/Regalos/web/Productos.jsp</file>
-            <file>file:/home/henry/NetBeansProjects/Regalos/src/java/listener/listener1.java</file>
             <file>file:/home/henry/NetBeansProjects/Regalos/src/java/servlets/Imagen.java</file>
             <file>file:/home/henry/NetBeansProjects/Regalos/src/java/servlets/InsertarProducto.java</file>
             <file>file:/home/henry/NetBeansProjects/Regalos/web/AddProducto.jsp</file>
-            <file>file:/home/henry/NetBeansProjects/Regalos/web/Registrar.jsp</file>
-            <file>file:/home/henry/NetBeansProjects/Regalos/web/incluir/carrusel.jsp</file>
-            <file>file:/home/henry/NetBeansProjects/Regalos/web/JS/slider.js</file>
-            <file>file:/home/henry/NetBeansProjects/Regalos/src/java/servlets/FormularioProducto.java</file>
-            <file>file:/home/henry/NetBeansProjects/Regalos/src/java/servlets/RecuperarProductoPrincipal.java</file>
-            <file>file:/home/henry/NetBeansProjects/Regalos/src/java/domain/Producto.java</file>
-            <file>file:/home/henry/NetBeansProjects/Regalos/src/java/servicios/ServicioProducto.java</file>
-            <file>file:/home/henry/NetBeansProjects/Regalos/web/CSS/estilos.css</file>
             <file>file:/home/henry/NetBeansProjects/Regalos/web/incluir/header.jsp</file>
-            <file>file:/home/henry/NetBeansProjects/Regalos/web/incluir/bootstrap.jsp</file>
             <file>file:/home/henry/NetBeansProjects/Regalos/src/java/recursos/DbQuery.java</file>
             <file>file:/home/henry/NetBeansProjects/Regalos/src/java/daos/ProductoDao.java</file>
             <file>file:/home/henry/NetBeansProjects/Regalos/web/index.jsp</file>
             <file>file:/home/henry/NetBeansProjects/Regalos/src/java/servlets/RecuperarProductos.java</file>
-            <file>file:/home/henry/NetBeansProjects/Regalos/web/eventos.jsp</file>
-            <file>file:/home/henry/NetBeansProjects/Regalos/web/IniciarSesion.jsp</file>
+            <file>file:/home/henry/NetBeansProjects/Regalos/src/java/domain/Producto.java</file>
         </group>
     </open-files>
 </project-private>
